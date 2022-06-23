@@ -36,8 +36,6 @@ jQuery(function($){
             success: function(resp) {
                 // handle success
                 // Save the result the url or attachment ID in a hidden input field and when the overall form is submitted, save it in the custom field.
-                alert(resp);
-                console.log(resp);
                 document.getElementById('hidden-file-field').value = resp.data.url;
             }
         });

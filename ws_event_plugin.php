@@ -112,7 +112,7 @@ function ws_event_plugin_build_form() {
         <!-- section MEDIAS -->
         <p>
             <input class="input_file" type="file" id="img_file" name="input_file" />
-            <input type="hidden" id="hidden-file-field" class="hidden-file-field" name="hidden_file_field" />
+            <input type="hidden" id="hidden-file-field" class="hidden-file-field" name="hidden_file_field" value="" />
         </p>
     <?php
 }
@@ -139,7 +139,7 @@ function ws_event_plugin_save_events() {
         }
         // MEDIAS SECTION
         if (isset($_POST['hidden_file_field'])) {
-            var_dump($_POST['hidden_file_field']);die;
+            // var_dump($_POST['hidden_file_field']);die;
             update_post_meta($post->ID, 'hidden_file_field', $_POST['hidden_file_field']);
         }
     }
